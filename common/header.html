@@ -19,6 +19,9 @@
 <!-- EEND OF ABOVE CODE   -->
 
 
+
+
+
 <!-- WIDGET chnage to add button to toolbar for entering text for posts  -->
 <script type="text/discourse-plugin" version="0.8">
   const currentLocale = I18n.currentLocale();
@@ -31,7 +34,7 @@
   api.onToolbarCreate(function(toolbar) {
     toolbar.addButton({
       trimLeading: true,
-      id: "buttonID",
+      id: "tmButtonID",
       group: "insertions",
       icon: 'heart',
       title: "my_button_title",
