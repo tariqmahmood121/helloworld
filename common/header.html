@@ -1,3 +1,34 @@
+// Tool bar add and remove icons
+
+<script type="text/discourse-plugin" version="0.8">
+  const currentLocale = I18n.currentLocale();
+  if (!I18n.translations[currentLocale].js.composer) {
+    I18n.translations[currentLocale].js.composer = {};
+  }
+  I18n.translations[currentLocale].js.composer.my_button_text = "Hey there!";
+  I18n.translations[currentLocale].js.my_button_title = "My Button!";
+
+  api.onToolbarCreate(function(toolbar) {
+    toolbar.addButton({
+      trimLeading: true,
+      id: "buttonID",
+      group: "insertions",
+      icon: 'heart',
+      title: "my_button_title",
+      perform: function(e) {
+        return e.applySurround(
+          '<div data-theme="foo">\n\n',
+          "\n\n</div>",
+          "my_button_text"
+        );
+      }
+    });
+  });
+</script>
+
+// end of toolbar
+
+
 <script type="text/x-handlebars" data-template-name="/connectors/topic-above-post-stream/foobar">
   <div style="height: 200px; width: 200px;background: red"></div>
 </script>
