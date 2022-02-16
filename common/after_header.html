@@ -1,15 +1,3 @@
-<script type="text/discourse-plugin" version="1.1.0">
-  const settings = Discourse.SiteSettings,
-    taggingEnabled = settings.tagging_enabled,
-    title = settings.title;
-
-  if (taggingEnabled) {
-    console.log("Yay! "+title+" has tagging enabled!")
-  } else {
-    console.log("Ohh nooos! "+title+"Does not allow tagging.")
-  }
-</script>
-
 <div class="wrap foobar">
     <button class="btn btn-primary">Click me!</button>
     <button class="btn btn-danger">Don't click me!</button>
