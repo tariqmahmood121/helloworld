@@ -1,3 +1,23 @@
+// css for tm widget
+
+@import "common/foundation/variables";
+
+.my-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary-high;
+  h1 {
+  padding: .5em;
+  color: $secondary;
+  margin: 0;
+  }
+}
+
+//
+
+
+
 .foobar {
   display: flex;
   justify-content: flex-end;
