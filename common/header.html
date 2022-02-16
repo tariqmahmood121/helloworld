@@ -1,3 +1,24 @@
+<!-- TM OWN WIDGET chnage -->
+<script type="text/discourse-plugin" version="0.8">
+  const h = require("virtual-dom").h;
+
+  api.createWidget("my-first-widget", {
+    tagName: "div.my-widget",
+
+    html() {
+      return h('h1', "Hello World!");
+    }
+  });
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="/connectors/above-footer/inject-widget">
+  {{mount-widget widget="my-first-widget"}}
+</script>
+
+<!-- EEND OF ABOVE CODE   -->
+
+
 <!-- WIDGET chnage to add button to toolbar for entering text for posts  -->
 <script type="text/discourse-plugin" version="0.8">
   const currentLocale = I18n.currentLocale();
