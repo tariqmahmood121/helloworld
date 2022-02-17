@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!--Show "LAUNCH TOPIC WITH PREFILLED DETAILS" button in the Header (only for authenticated users) -->
 
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
@@ -11,6 +12,20 @@
           }, iconNode('heart')),
       ]);
   });
+  
+  <script type="text/discourse-plugin" version="0.8">
+  const { iconNode } = require("discourse-common/lib/icon-library");
+  api.decorateWidget('header-buttons:before', helper => {
+      return helper.h('li', [
+          helper.h('a.icon', {
+              href:'https://opticalzoo.com/new-topic?title=Please%20give%20meaningful%20title&body=write%20here%20what%20ever%20you%20wish%20to%20discuss%20about&category_id=5',
+              title: 'Foobar'
+          }, iconNode('heart')),
+      ]);
+  });
+  
+  
+
 </script>
 
 <!--Show "HOME BUTTON" button in the Header (only for authenticated users) -->
