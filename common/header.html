@@ -1,22 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script type="text/discourse-plugin" version="0.2">
-api.decorateWidget('header:after', helper => {
-    const showExtraInfo = helper.attrs.topic;
-        if(!showExtraInfo) {
-            return helper.h('div#header-links', [
-                helper.h('a#recruiter', {
-                    href:'https://sih.onemadogre.com/t/joining-sih/494', 
-                    text:'Join Us!'
-                }),
-                helper.h('a#about', {
-                    href:'https://sih.onemadogre.com/c/guild-news-announcements/about-the-guild', 
-                    text:'About SiH'
-                })
-            ]);
-        }
-});
-</script>
 
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
