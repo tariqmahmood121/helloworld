@@ -25,6 +25,15 @@
 </script>
 
 <script type="text/discourse-plugin" version="0.8">
+  api.decorateWidget('header-buttons:after', helper => {
+    name: "link-to-movies-category",
+    displayName: "movies",
+    href: "opticalzoo.com",
+    title: "link title"
+  })
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
   api.addNavigationBarItem({
     name: "link-to-movies-category",
     displayName: "movies",
