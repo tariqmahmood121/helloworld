@@ -1,6 +1,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<script type="text/discourse-plugin" version="0.8">
+  const { iconNode } = require("discourse-common/lib/icon-library");
+  api.decorateWidget('header-icons:before', helper => {
+      return helper.h('li', [
+          helper.h('a.icon', {
+              href:'https://opticalzoo.com/new-message?username=techapj&title=message%20title&body=message%20body',
+              title: 'Foobar'
+          }, iconNode('heart')),
+      ]);
+  });
+</script>
 
 <!--Show "HOME BUTTON" button in the Header (only for authenticated users) -->
 <script type="text/discourse-plugin" version="0.8">
@@ -30,7 +40,7 @@
                 'button#newcase', {
                 className: "btn btn-text btn-danger create ember-view",
                 title: "Add Case",
-                onclick: createTopic('https://opticalzoo.com/new-message?username=techapj&title=message%20title&body=message%20body'),}, 'Click to Start a Discussion!'  // ''-this is 'text' for the button, change as needed.
+                onclick: createTopic,}, 'Click to Start a Discussion!'  // ''-this is 'text' for the button, change as needed.
             );  
         }
     });
