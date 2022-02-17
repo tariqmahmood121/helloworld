@@ -33,6 +33,25 @@
   })
 </script>
 
+
+<!--Show "Create" button in the Header (only for authenticated users) -->
+<script type="text/discourse-plugin" version="0.4">
+    api.decorateWidget('header-buttons:after', helper => {
+        if (Discourse.User.current()) {
+            const createTopic = function() {
+                const Composer = require('discourse/models/composer').default;
+                const composerController = Discourse.__container__.lookup('controller:composer');
+                composerController.open({ action: Composer.CREATE_TOPIC, draftKey: Composer.DRAFT });
+            }
+            return helper.h('button#create-new', {
+                className: "btn fa fa-plus",
+                title: "Create",
+                onclick: createTopic
+            }, '' );  // ''-this is 'text' for the button, change as needed.
+        }
+    });
+</script>
+
 <!-- EEND OF ABOVE CODE   -->
 
 
