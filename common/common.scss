@@ -16,6 +16,36 @@ button#newcase {
 }
 
 
+/* Hide the original "+ New Topic" button */
+    button#create-topic { 
+        display: none;
+    }
+    /* Larger "Create" button on Desktop */
+    button#create-new {
+        margin-top:2px;
+        font-size: large;
+        height: 38px;
+        width: 38px;
+        line-height: 40PX;
+        padding: 0;
+        color: rgb(153, 153, 153);
+        opacity: 0.699999988079071;
+        background-color: transparent;
+    }
+    button#create-new:hover {
+        
+        color: rgb(40, 40, 40);    
+        background-color: rgb(233,233,233);
+        
+    }
+    
+    /* Smaller "Create" button on Mobile */
+    html.mobile-view.mobile-device button#create-new {
+        height: 32px;
+        width: 32px;
+        margin: 3px;
+    }
+
 
 // --------------------
 
