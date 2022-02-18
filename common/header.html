@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-
 <!--Show "Create wizard button" button in the Header (only for authenticated users) -->
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
@@ -10,7 +7,7 @@
       return helper.h('li', [
           helper.h('a.icon', {
               href:'https://opticalzoo.com/w/wiz-91/steps/step_1',         
-              title: 'Home Page'
+              title: 'Create a Discussion with a Wizard'
           }, iconNode('envelope')),
       ]);
   });
