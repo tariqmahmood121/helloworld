@@ -2,21 +2,9 @@
 <div class="wrap foobar">
   
     <div class="icon-bar">
-      <a class="active" href="#"><i class="fa fa-home"></i></a>
+      <a class="active" href="https://opticalzoo.com/w/wiz-91/steps/step_1"><i class="fa fa-home"></i></a>
     </div> 
     
-    <!--Show "Create wizard button" button in the Header (only for authenticated users) -->
-    <script type="text/discourse-plugin" version="0.8">
-      const { iconNode } = require("discourse-common/lib/icon-library");
-      api.decorateWidget('header-icons:before', helper => {
-          return helper.h('li', [
-              helper.h('a.icon', {
-                  href:'https://opticalzoo.com/w/wiz-91/steps/step_1',         
-                  title: 'Create a Discussion with a Wizard'
-              }, iconNode('envelope')),
-          ]);
-      });
-    </script>
 </div>
 
 <div class="hello-world-banner">
