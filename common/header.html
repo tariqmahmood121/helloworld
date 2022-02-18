@@ -1,5 +1,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+<script  type="text/javascript" src="
+http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js">
+</script>
+<script type="text/javascript" src="
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js">
+</script>
+
+<script type="text/javascript">
+    $(function ()    {
+        $('<div>').dialog({
+            modal: true,
+            open: function ()
+            {
+                $(this).load('Sample.htm');
+            },         
+            height: 400,
+            width: 400,
+            title: 'Dynamically Loaded Page'
+        });
+    });
+</script>
+
+
+
 <!--Show "Create wizard button" button in the Header (only for authenticated users) -->
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
