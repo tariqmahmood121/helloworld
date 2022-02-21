@@ -13,7 +13,7 @@
   });
 </script>
 -->
-<!--Show "LAUNCH TOPIC WITH PREFILLED DETAILS" button in the Header (only for authenticated users) -->
+<!--Show "LAUNCH TOPIC WITH PREFILLED DETAILS" button in the Header (only for authenticated users)
 
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
@@ -27,7 +27,7 @@
   });
   
   </script>
-  
+
   <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
   api.decorateWidget('header-buttons:before', helper => {
@@ -41,8 +41,10 @@
   
    </script>  
  
+   -->
 
-<!--Show "HOME BUTTON" button in the Header (only for authenticated users) -->
+
+<!--Show "HOME BUTTON" button in the Header (only for authenticated users) 
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
   api.decorateWidget('header-icons:before', helper => {
@@ -54,8 +56,10 @@
       ]);
   });
 </script>
+-->
 
-<!-- TM Create TOPIC BUTTON  -->
+
+<!-- TM Create TOPIC BUTTON  
 <script type="text/discourse-plugin" version="0.4">
     api.decorateWidget('header-buttons:after', helper => {
         if (Discourse.User.current()) {
@@ -80,7 +84,7 @@
 </script>
 
 
-
+-->
 
 
 
