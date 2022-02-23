@@ -227,3 +227,16 @@ Show "Create" button in the Header (only for authenticated users)
   });
 </script>
 
+<!--Show "HOME BUTTON" button in the Header (only for authenticated users) 
+<script type="text/discourse-plugin" version="0.8">
+import { createWidget } from 'discourse/widgets/widget';
+import { h } from 'virtual-dom';
+
+createWidget('my-widget', {
+  tagName: 'div.hello',
+
+  html() {
+    return h('span.greeting', h('b', "hello world"));
+  }
+});
+</script>
